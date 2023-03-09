@@ -74,6 +74,8 @@ export default {
 .product-item {
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   .d-btn-add {
     padding: 5px 10px!important;
@@ -96,6 +98,9 @@ export default {
 
   &__content {
     padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 
     .header {
       display: flex;
@@ -132,6 +137,7 @@ export default {
     }
 
     .count-row {
+      margin-bottom: auto;
       .count {
         font-size: 13px;
 
