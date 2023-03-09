@@ -1,5 +1,4 @@
 export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'project-tz',
     htmlAttrs: {
@@ -12,30 +11,43 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
+
   css: [
+    '@/assets/css/default.css',
   ],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  styleResources: {
+    scss: [
+      '~/assets/scss/mixins.scss',
+      '~/assets/scss/variables.scss',
+      '~/assets/scss/container.scss',
+      '~/assets/scss/main.scss',
+    ]
+  },
+
   plugins: [
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/style-resources'
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/toast',
   ],
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+  toast: {
+    position: 'top-center',
+    duration: '500',
+    register: []
+  },
+
   build: {
   }
 }
